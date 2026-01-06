@@ -1,0 +1,62 @@
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,html {
+    margin:0;
+    padding: 0;
+    height: 97vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+th, td {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+
+}
+th {
+    background-color: #f4f4f4;
+}
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+#actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#upload-area {
+    text-align: center;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+body.drag-over {
+    background-color: rgba(0, 120, 255, 0.1);
+    border: 2px dashed #007bff;
+}
