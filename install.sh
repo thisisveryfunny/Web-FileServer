@@ -22,7 +22,7 @@ command_exists() {
 }
 
 # Install Nginx
-echo -e "${YELLOW}Installing Nginx...${NC}"
+echo -e "${YELLOW}Installing Nginx... (Please wait.)${NC}"
 apt update > /dev/null 2>&1
 apt install nginx -y > /dev/null 2>&1
 
@@ -31,7 +31,7 @@ if command_exists node; then
     NODE_VERSION=$(node --version)
     echo -e "${GREEN}Node.js is already installed: ${NODE_VERSION}${NC}"
 else
-    echo -e "${YELLOW}Node.js not found. Installing...${NC}"
+    echo -e "${YELLOW}Node.js not found. Installing... (Please wait.)${NC}"
     apt install nodejs -y > /dev/null 2>&1
     if command_exists node; then
         echo -e "${GREEN}Node.js installed successfully: $(node --version)${NC}"
@@ -46,7 +46,7 @@ if command_exists npm; then
     NPM_VERSION=$(npm --version)
     echo -e "${GREEN}npm is already installed: ${NPM_VERSION}${NC}"
 else
-    echo -e "${YELLOW}npm not found. Installing...${NC}"
+    echo -e "${YELLOW}npm not found. Installing... (Please wait.)${NC}"
     apt install npm -y > /dev/null 2>&1
     if command_exists npm; then
         echo -e "${GREEN}npm installed successfully: $(npm --version)${NC}"
@@ -68,7 +68,7 @@ mv ./frontend/* /var/www/fileserver/frontend/
 mv ./backend/* /var/www/fileserver/backend/
 
 # Install npm packages
-echo -e "${YELLOW}Installing npm packages...${NC}"
+echo -e "${YELLOW}Installing npm packages... (Please wait.)${NC}"
 cd /var/www/fileserver/backend
 npm init -y > /dev/null 2>&1
 npm install express multer > /dev/null 2>&1
