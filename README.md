@@ -30,4 +30,6 @@ Hope you use it for your home!
 - Improve css
 - Fix bugs
 - Add preview of the content of the file
+- Add logging for the backend.
+- Add loading information when uploadng a file, Like : Uploading <filename>. Please Wait.
 - ...
